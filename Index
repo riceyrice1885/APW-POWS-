@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-6WZN7LJ9HQ');
+</script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>APW UPOWs Website </title>
+  <meta name="description" content="Artistic Website of Raisa Ihnat." />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    :root{
+      --bg:#000; --ink:#e6f0ff; --muted:#0066ff; --link:#0a66c2;
+      --pad: clamp(14px, 2.5vw, 24px); --max: 980px; --grid-gap: clamp(8px, 1.6vw, 16px);
+      --font-head: "Lora", Georgia, serif; --font-body: "Lora", Georgia, serif;
+    }
+    html, body { height: 100%; }
+    body{
+      margin:0; display:flex; flex-direction:column;
+      font:16px/1.55 var(--font-body); color:var(--ink); background:var(--bg);
+    }
+    /* Hide top bar on the HOME page only */
+    header{ display:none; }
+    main{
+      flex:1; max-width:var(--max); margin:0 auto; padding:var(--pad);
+      display:flex; align-items:center; justify-content:center; text-align:center;
+      min-height:80vh;  /* centers hero vertically */
+    }
+    footer{
+      max-width:var(--max); margin:0 auto; padding:var(--pad);
+      color:var(--ink); font-family:var(--font-body); opacity:.85;
+    }
+    h1,h2,h3,h4,h5,h6{
+      font-family:var(--font-head); font-weight:900; letter-spacing:.03em; margin:0 0 .5rem;
+    }
+    a{ color:var(--ink); text-decoration:none; border-bottom:1px solid transparent; }
+    a:hover{ border-bottom-color:currentColor; }
+    /* -------- Text-only HERO -------- */
+    .hero{ display:flex; flex-direction:column; align-items:center; gap:.8rem; }
+    .hero h1{ font-size:clamp(32px,6vw,56px); letter-spacing:.05em; margin:0; }
+    .hero p{ font-size:clamp(16px,1.8vw,20px); opacity:.72; margin:0 0 .4rem; }
+    .hero nav a{ color:#9aa9c2; margin:0 .6rem; font-size:.95rem; letter-spacing:.04em; }
+    .hero nav a:hover{ color:var(--ink); }
+    /* -------- Soft fade-up animation -------- */
+    @keyframes fadeUp { from {opacity:0; transform:translateY(12px)} to {opacity:1; transform:translateY(0)} }
+    .hero h1{ animation:fadeUp .8s ease both .05s; }
+    .hero p{  animation:fadeUp .8s ease both .2s; }
+    .hero nav{animation:fadeUp .8s ease both .35s; }
+  </style>
+</head>
+<body>
+  <!-- header is kept for other pages’ consistency but hidden here -->
+  <header>
+    <nav class="nav">
+      <div class="brand">A Power Within: Ukrainian POWs Remember</div>
+      <div class="spacer"></div>
+      <a href="about.html">ABOUT</a>
+      <a href="media.html">WORK</a>
+      <a href="STUDIO.html">STUDIO</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <h1>RAISA IHNAT</h1>
+      <p>pianist &amp; multimedia artist</p>
+      <nav>
+        <a href="about.html">ABOUT</a> •
+        <a href="media.html">WORK</a> •
+        <a href="contact.html">CONTACT</a>
+      </nav>
+    </section>
+  </main>
+  <footer>
+    &copy; <span id="year"></span> Andrea Odezynska. All Rights Reserved.
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
