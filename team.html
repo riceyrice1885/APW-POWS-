@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,14 +7,12 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-6WZN7LJ9HQ');
 </script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact — A Power Within: Ukrainian POWs Remember</title>
-  <meta name="description" content="Contact information for A Power Within: Ukrainian POWs Remember." />
-
+  <title>Team — A Power Within: Ukrainian POWs Remember</title>
+  <meta name="description" content="Team behind A Power Within: Ukrainian POWs Remember." />
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,6 +37,7 @@
       font-family: "Lora", Georgia, serif;
       font-size: 16px;
       line-height: 1.6;
+      overflow-x: hidden;
     }
 
     header {
@@ -51,9 +48,10 @@
       max-width: 900px;
       margin: 0 auto;
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
       justify-content: center;
-      gap: 24px;
+      gap: 12px 20px;
     }
 
     .nav a {
@@ -62,57 +60,59 @@
       letter-spacing: .06em;
       font-weight: 700;
       font-size: .9rem;
+      white-space: nowrap;
     }
 
     .nav a:hover {
       text-decoration: underline;
     }
 
+    @media (max-width: 480px) {
+      .nav { gap: 8px 14px; }
+      .nav a { font-size: .78rem; }
+    }
+
     main {
       flex: 1;
+      width: 100%;
+      max-width: 700px;
+      margin: 0 auto;
       display: flex;
-      align-items: center;
       justify-content: center;
       padding: clamp(14px, 2.5vw, 24px);
     }
 
-    .contact {
+    .team {
+      width: 100%;
       text-align: center;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 1.2rem;
     }
 
-    .contact h1 {
+    .team h1 {
       font-family: "Lora", Georgia, serif;
       font-weight: 700;
       font-size: clamp(28px, 5vw, 44px);
       letter-spacing: .04em;
-      margin: 0 0 .5rem;
+      margin: 0 0 2.5rem;
     }
 
-    .field {
+    /* Vertical list of names, each its own floating group
+       (space above/below, no visible box or border) */
+    .team-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      width: 100%;
       display: flex;
       flex-direction: column;
-      gap: .3rem;
     }
 
-    .field .label {
-      font-size: .8rem;
-      letter-spacing: .12em;
-      opacity: .6;
-    }
-
-    .field a {
-      color: #e6f0ff;
-      text-decoration: none;
-      font-size: 1.1rem;
-      border-bottom: 1px solid transparent;
-    }
-
-    .field a:hover {
-      border-bottom-color: currentColor;
+    .team-list li {
+      padding: 1.75rem 0;
+      font-size: clamp(18px, 2.4vw, 24px);
+      letter-spacing: .03em;
     }
 
     footer {
@@ -140,8 +140,17 @@
   <main>
     <div class="team">
       <h1>Team</h1>
-
-     
+      <ul class="team-list">
+        <li>Andrea Odezynska</li>
+        <li>David Kelly Crow</li>
+        <li>Janet Antich</li>
+        <li>Askold Buk</li>
+        <li>Raisa Ihnat</li>
+        <li>Waldemart Klyuzko</li>
+        <li>Paul D. Goodrich</li>
+        <li>Nadia Sokolenko</li>
+      </ul>
+    </div>
   </main>
 
   <footer>
