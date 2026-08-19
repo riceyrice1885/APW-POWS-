@@ -1,86 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-6WZN7LJ9HQ');
-</script>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Google Analytics -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-6WZN7LJ9HQ');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>A Power Within: Ukrainian POWs Remember</title>
-  <meta name="description" content="A Power Within: Ukrainian POWs Remember." />
-  <!-- Google Fonts -->
+
+  <meta
+    name="description"
+    content="A Power Within: Ukrainian POWs Remember."
+  >
+
+  <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+    rel="stylesheet"
+  >
+
   <style>
-    :root{
-      --bg:#000; --ink:#e6f0ff; --muted:#0066ff; --link:#0a66c2;
-      --pad: clamp(14px, 2.5vw, 24px); --max: 980px; --grid-gap: clamp(8px, 1.6vw, 16px);
-      --font-head: "Lora", Georgia, serif; --font-body: "Lora", Georgia, serif;
+
+    /* =========================
+       BASIC PAGE
+       ========================= */
+
+    * {
+      box-sizing: border-box;
     }
-    html, body { height: 100%; }
-    body{
-      margin:0; display:flex; flex-direction:column;
-      font:16px/1.55 var(--font-body); color:var(--ink); background:var(--bg);
+
+    html,
+    body {
+      width: 100%;
+      min-height: 100%;
+      margin: 0;
+      padding: 0;
+      background: #000000 !important;
+      color: #ffffff !important;
     }
-    /* Hide top bar on the HOME page only */
-    header{ display:none; }
-    main{
-      flex:1; max-width:var(--max); margin:0 auto; padding:var(--pad);
-      display:flex; align-items:center; justify-content:center; text-align:center;
-      min-height:80vh;  /* centers hero vertically */
+
+    body {
+      min-height: 100vh;
+
+      display: flex;
+      flex-direction: column;
+
+      font-family: "Lora", Georgia, serif;
+      font-size: 16px;
+      line-height: 1.55;
     }
-    footer{
-      max-width:var(--max); margin:0 auto; padding:var(--pad);
-      color:var(--ink); font-family:var(--font-body); opacity:.85;
+
+
+    /* =========================
+       HIDE HEADER ON HOMEPAGE
+       ========================= */
+
+    header {
+      display: none;
     }
-    h1,h2,h3,h4,h5,h6{
-      font-family:var(--font-head); font-weight:900; letter-spacing:.03em; margin:0 0 .5rem;
+
+
+    /* =========================
+       MAIN CONTENT
+       ========================= */
+
+    main {
+      flex: 1;
+
+      width: 100%;
+      max-width: 980px;
+
+      margin: 0 auto;
+      padding: 24px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+
+      min-height: 80vh;
     }
-    a{ color:var(--ink); text-decoration:none; border-bottom:1px solid transparent; }
-    a:hover{ border-bottom-color:currentColor; }
-    /* -------- Text-only HERO -------- */
-    .hero{ display:flex; flex-direction:column; align-items:center; gap:.8rem; }
-    .hero h1{ font-size:clamp(28px,5vw,48px); letter-spacing:.04em; margin:0; max-width: 20ch; }
-    .hero p{ font-size:clamp(16px,1.8vw,20px); opacity:.72; margin:0 0 .4rem; }
-    .hero nav a{ color:#9aa9c2; margin:0 .6rem; font-size:.95rem; letter-spacing:.04em; }
-    .hero nav a:hover{ color:var(--ink); }
-    /* -------- Soft fade-up animation -------- */
-    @keyframes fadeUp { from {opacity:0; transform:translateY(12px)} to {opacity:1; transform:translateY(0)} }
-    .hero h1{ animation:fadeUp .8s ease both .05s; }
-    .hero p{  animation:fadeUp .8s ease both .2s; }
-    .hero nav{animation:fadeUp .8s ease both .35s; }
+
+
+    /* =========================
+       HERO
+       ========================= */
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      gap: 20px;
+    }
+
+
+    /* =========================
+       TITLE
+       ========================= */
+
+    .hero h1 {
+      margin: 0;
+
+      max-width: 20ch;
+
+      font-family: "Lora", Georgia, serif;
+      font-size: clamp(28px, 5vw, 48px);
+      font-weight: 700;
+      line-height: 1.15;
+
+      letter-spacing: 0.04em;
+
+      color: #ffffff !important;
+
+      animation: fadeUp 0.8s ease both;
+    }
+
+
+    /* =========================
+       NAVIGATION
+       ========================= */
+
+    .hero nav {
+      color: #ffffff !important;
+
+      animation: fadeUp 0.8s ease both 0.25s;
+    }
+
+    .hero nav a {
+      color: #ffffff !important;
+
+      margin: 0 10px;
+
+      font-family: "Lora", Georgia, serif;
+      font-size: 15px;
+
+      letter-spacing: 0.04em;
+
+      text-decoration: none;
+
+      border-bottom: 1px solid transparent;
+    }
+
+    .hero nav a:hover {
+      color: #cccccc !important;
+
+      border-bottom-color: #ffffff;
+    }
+
+
+    /* =========================
+       FOOTER
+       ========================= */
+
+    footer {
+      width: 100%;
+      max-width: 980px;
+
+      margin: 0 auto;
+      padding: 24px;
+
+      color: #ffffff !important;
+
+      font-family: "Lora", Georgia, serif;
+
+      text-align: center;
+
+      opacity: 0.7;
+    }
+
+
+    /* =========================
+       ANIMATION
+       ========================= */
+
+    @keyframes fadeUp {
+
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+    }
+
   </style>
+
 </head>
+
+
 <body>
-  <!-- header is kept for other pages’ consistency but hidden here -->
-  <header>
-    <nav class="nav">
-      <div class="brand">A Power Within: Ukrainian POWs Remember</div>
-      <div class="spacer"></div>
-      <a href="about.html">ABOUT</a>
-      <a href="media.html">WORK</a>
-      <a href="STUDIO.html">STUDIO</a>
-      <a href="contact.html">CONTACT</a>
-    </nav>
-  </header>
+
+
+  <!-- =========================
+       HOMEPAGE
+       ========================= -->
+
   <main>
+
     <section class="hero">
-      <h1>A Power Within: Ukrainian POWs Remember</h1>
+
+      <h1>
+        A Power Within: Ukrainian POWs Remember
+      </h1>
+
       <nav>
-        <a href="about.html">ABOUT</a> •
-        <a href="media.html">WORK</a> •
+
+        <a href="about.html">ABOUT</a>
+
+        •
+
+        <a href="media.html">WORK</a>
+
+        •
+
         <a href="contact.html">CONTACT</a>
+
       </nav>
+
     </section>
+
   </main>
+
+
+  <!-- =========================
+       FOOTER
+       ========================= -->
+
   <footer>
-    &copy; <span id="year"></span> Andrea Odezynska. All Rights Reserved.
+
+    &copy;
+    <span id="year"></span>
+    Andrea Odezynska. All Rights Reserved.
+
   </footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+
+  <!-- =========================
+       YEAR
+       ========================= -->
+
+  <script>
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+  </script>
+
+
 </body>
 </html>
