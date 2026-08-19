@@ -115,6 +115,35 @@
       letter-spacing: .03em;
     }
 
+    /* Expanded entry: name + title + bio, still just floating
+       whitespace-separated content, no box/border */
+    .team-list li.expanded {
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+    }
+
+    .team-list li.expanded .name {
+      font-size: clamp(18px, 2.4vw, 24px);
+      font-weight: 700;
+      letter-spacing: .03em;
+    }
+
+    .team-list li.expanded .title {
+      font-size: clamp(13px, 1.6vw, 15px);
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      opacity: .6;
+    }
+
+    .team-list li.expanded .bio {
+      font-size: clamp(14px, 1.7vw, 16px);
+      line-height: 1.6;
+      opacity: .85;
+      max-width: 560px;
+      margin: .4rem auto 0;
+    }
+
     footer {
       text-align: center;
       padding: clamp(14px, 2.5vw, 24px);
@@ -145,7 +174,11 @@
         <li>David Kelly Crow</li>
         <li>Janet Antich</li>
         <li>Askold Buk</li>
-        <li>Raisa Ihnat</li>
+        <li class="expanded">
+          <span class="name">Raisa Ihnat</span>
+          <span class="title">Sound Design</span>
+          <p class="bio">Add her bio text here — a few sentences about her background and role on the film.</p>
+        </li>
         <li>Waldemart Klyuzko</li>
         <li>Paul D. Goodrich</li>
         <li>Nadia Sokolenko</li>
