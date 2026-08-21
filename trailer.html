@@ -1,1 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6WZN7LJ9HQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-6WZN7LJ9HQ');
+</script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Trailer — A Power Within: Ukrainian POWs Remember</title>
+  <meta name="description" content="Watch the trailer for A Power Within: Ukrainian POWs Remember." />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 
+  <style>
+    * { box-sizing: border-box; }
+
+    html, body {
+      width: 100%;
+      min-height: 100%;
+      margin: 0;
+      padding: 0;
+      background: #000000;
+      color: #e6f0ff;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-family: "Rubik", Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    header {
+      padding: clamp(14px, 2.5vw, 24px);
+    }
+
+    .nav {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 12px 20px;
+    }
+
+    .nav a {
+      color: #e6f0ff;
+      text-decoration: none;
+      letter-spacing: .06em;
+      font-weight: 700;
+      font-size: .9rem;
+      white-space: nowrap;
+    }
+
+    .nav a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 480px) {
+      .nav { gap: 8px 14px; }
+      .nav a { font-size: .78rem; }
+    }
+
+    main {
+      flex: 1;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: clamp(14px, 2.5vw, 24px);
+    }
+
+    .about {
+      width: 100%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .about h1 {
+      font-family: "Rubik", Arial, sans-serif;
+      font-weight: 700;
+      font-size: clamp(28px, 5vw, 44px);
+      letter-spacing: .04em;
+      margin: 0 0 .5rem;
+    }
+
+    /* Photo above the Trailer link */
+    .about .trailer-photo {
+      width: 100%;
+      max-width: 700px;
+      border-radius: 6px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    }
+
+    /* Trailer link */
+    .about .trailer-link {
+      display: inline-block;
+      font-size: clamp(16px, 2vw, 20px);
+      font-weight: 700;
+      letter-spacing: .06em;
+      color: #e6f0ff;
+      text-decoration: none;
+      border-bottom: 1px solid currentColor;
+    }
+
+    .about .trailer-link:hover {
+      opacity: .75;
+    }
+
+    /* Body paragraph */
+    .about p.body-text {
+      max-width: 620px;
+      font-size: clamp(15px, 1.7vw, 17px);
+      line-height: 1.7;
+      opacity: .9;
+      text-align: left;
+      margin: 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: clamp(14px, 2.5vw, 24px);
+      color: #e6f0ff;
+      opacity: .7;
+      font-size: .9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="team.html">TEAM</a>
+      <a href="work.html">WORK</a>
+      <a href="screenings.html">SCREENINGS</a>
+      <a href="press.html">PRESS</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="about">
+      <h1>Trailer</h1>
+
+      <img class="trailer-photo" src="serhii.jpg" alt="Portrait of Serhii on set" />
+
+      <a class="trailer-link" href="https://vimeo.com/1218778946" target="_blank" rel="noopener">Trailer</a>
+
+      <p class="body-text">
+        Add your trailer description text here — a short paragraph about what the trailer shows.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    &copy; <span id="year"></span> Andrea Odezynska. All Rights Reserved.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
