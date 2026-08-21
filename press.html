@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,19 +7,17 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-6WZN7LJ9HQ');
 </script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact — A Power Within: Ukrainian POWs Remember</title>
-  <meta name="description" content="Contact information for A Power Within: Ukrainian POWs Remember." />
-
+  <title>Press — A Power Within: Ukrainian POWs Remember</title>
+  <meta name="description" content="Press and reviews for A Power Within: Ukrainian POWs Remember." />
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
- 
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
   <style>
     * { box-sizing: border-box; }
 
@@ -40,6 +37,7 @@
       font-family: "Rubik", Arial, sans-serif;
       font-size: 16px;
       line-height: 1.6;
+      overflow-x: hidden;
     }
 
     header {
@@ -50,9 +48,10 @@
       max-width: 900px;
       margin: 0 auto;
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
       justify-content: center;
-      gap: 24px;
+      gap: 12px 20px;
     }
 
     .nav a {
@@ -61,57 +60,85 @@
       letter-spacing: .06em;
       font-weight: 700;
       font-size: .9rem;
+      white-space: nowrap;
     }
 
     .nav a:hover {
       text-decoration: underline;
     }
 
+    @media (max-width: 480px) {
+      .nav { gap: 8px 14px; }
+      .nav a { font-size: .78rem; }
+    }
+
     main {
       flex: 1;
+      width: 100%;
+      max-width: 700px;
+      margin: 0 auto;
       display: flex;
-      align-items: center;
       justify-content: center;
       padding: clamp(14px, 2.5vw, 24px);
     }
 
-    .contact {
+    .press {
+      width: 100%;
       text-align: center;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 1.2rem;
     }
 
-    .contact h1 {
+    .press h1 {
       font-family: "Rubik", Arial, sans-serif;
       font-weight: 700;
       font-size: clamp(28px, 5vw, 44px);
       letter-spacing: .04em;
-      margin: 0 0 .5rem;
+      margin: 0 0 2.5rem;
     }
 
-    .field {
+    /* Vertical list of reviews, each its own floating
+       group (space above/below, no visible box or border) */
+    .press-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      width: 100%;
       display: flex;
       flex-direction: column;
-      gap: .3rem;
     }
 
-    .field .label {
-      font-size: .8rem;
-      letter-spacing: .12em;
-      opacity: .6;
+    .press-list li {
+      padding: 2.25rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: .6rem;
     }
 
-    .field a {
-      color: #e6f0ff;
-      text-decoration: none;
-      font-size: 1.1rem;
-      border-bottom: 1px solid transparent;
+    .press-list .quote {
+      font-size: clamp(15px, 1.8vw, 18px);
+      line-height: 1.7;
+      opacity: .92;
+      margin: 0;
     }
 
-    .field a:hover {
-      border-bottom-color: currentColor;
+    .press-list .quote::before {
+      content: open-quote;
+    }
+
+    .press-list .quote::after {
+      content: close-quote;
+    }
+
+    .press-list .attribution {
+      font-size: .85rem;
+      letter-spacing: .04em;
+      opacity: .65;
+    }
+
+    .press-list .attribution .name {
+      font-weight: 700;
     }
 
     footer {
@@ -141,7 +168,21 @@
     <div class="press">
       <h1>Press</h1>
 
-     
+      <ul class="press-list">
+
+        <!-- COPY FROM HERE ▼ FOR EACH NEW REVIEW -->
+        <li>
+          <p class="quote">Andrea Odezynska wisely lets Ukrainian soldiers formerly imprisoned by the Russians speak. And speak they do, to us, to the world that continues to turn a blind eye to Vladimir Putin's war crimes.. The soldiers speak quietly, unemotionally, and matter-of-factly about the terrible tortures they endured, about their hopes and fears, about the inhumanity of their captors. No one who listens to these brave men can ignore the fact that Russia is committing genocide in Ukraine. Odezynska has performed a great service. Brava!</p>
+          <p class="attribution">
+            <span class="name">Prof. Alexander J. Motyl</span><br>
+            Professor of Political Science<br>
+            Rutgers University-Newark
+          </p>
+        </li>
+        <!-- TO ▲ HERE, THEN PASTE BELOW WITH NEW TEXT -->
+
+      </ul>
+    </div>
   </main>
 
   <footer>
