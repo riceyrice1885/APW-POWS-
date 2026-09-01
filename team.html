@@ -115,11 +115,12 @@
       letter-spacing: .03em;
     }
 
-    /* Expanded entry: name + title + bio, still just floating
-       whitespace-separated content, no box/border */
+    /* Expanded entry: name + title + photo + bio, still just
+       floating whitespace-separated content, no box/border */
     .team-list li.expanded {
       display: flex;
       flex-direction: column;
+      align-items: center;
       gap: .5rem;
     }
 
@@ -136,12 +137,35 @@
       opacity: .6;
     }
 
+    /* Round headshot photo between title and bio */
+    .team-list li.expanded .headshot {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: .5rem 0 .25rem;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+    }
+
     .team-list li.expanded .bio {
       font-size: clamp(14px, 1.7vw, 16px);
       line-height: 1.6;
       opacity: .85;
       max-width: 560px;
       margin: .4rem auto 0;
+      text-align: left;
+    }
+
+    /* Each paragraph inside a bio gets space below it,
+       and the first line of each paragraph is indented
+       like a traditional printed paragraph */
+    .team-list li.expanded .bio p {
+      margin: 0 0 1rem;
+      text-indent: 1.5em;
+    }
+
+    .team-list li.expanded .bio p:last-child {
+      margin-bottom: 0;
     }
 
     footer {
@@ -170,54 +194,56 @@
     <div class="team">
       <h1>TEAM</h1>
       <ul class="team-list">
-      
+
         <li class="expanded">
-        <span class="name">Andrea Odezynska</span>
-         <span class="title">Director | Editor | Producer</span> 
-           <p class="bio">Andrea Odezynska has created narrative, documentary, and experimental films. Variety praised her work's “beautiful, iconic images.” In 2025, Andrea flew to war torn Ukraine to begin principal photography on her newest film, A POWER WITHIN: UKRAINIAN POWs REMEMBER. Earlier in 2023, Andrea directed and edited a campaign of short films in Ukraine for the NGO and UNICEF partner - HealthRight. These films show the challenges faced by healthcare workers and displaced peoples within Ukraine. https://healthright.org/ukraine-war-relief/   
-             In 2022, her environmental feature documentary, RETURN SASYK TO THE SEA, (Ukraine) went on to thirteen environmental festivals and is streaming on TUBI TV, Apple TV (by TUBI) and others. Grants: Winner of International Wildlife Film Festival “Labs Fellowship” Grant 2022, U.S. Scholar Fulbright Grant (Ukraine) 2018-2019, NEA The National Endowment for the Arts, NYSCA The New York State Council on the Arts, and the Robert Wise Foundation. Festivals: The Chesapeake Film Festival, The International Wildlife Film Festival (Montana), Through Women’s Eyes International Film Festival, The Yale Environmental Film Festival, Princeton Environmental Film Festival, Cinema e Ambiente Avezzano (Italy) Paribas Green International Film Festival (Poland), Denali Film Festival (Alaska), MAFF Matsalu Film Festival (Estonia), DOCK Historical Documentary Film Festival (Bulgaria), The Hamptons Film Festival, Rotterdam, Kansas City Kansas (sidebar films about motherhood), The Rural Route Film Festival, Craft In Focus Festival in Amsterdam, Holland. 
-             Andrea holds an MFA in Directing from AFI, The American Film Institute Conservatory, Hollywood, CA.
-</p>
+          <span class="name">Andrea Odezynska</span>
+          <span class="title">Director | Editor | Producer</span>
+
+          <img class="headshot" src="andrea.jpg" alt="Portrait of Andrea Odezynska" />
+
+          <div class="bio">
+            <p>Andrea Odezynska has created narrative, documentary, and experimental films. Variety praised her work's "beautiful, iconic images." In 2025, Andrea flew to war torn Ukraine to begin principal photography on her newest film, A POWER WITHIN: UKRAINIAN POWs REMEMBER.</p>
+
+            <p>Earlier in 2023, Andrea directed and edited a campaign of short films in Ukraine for the NGO and UNICEF partner — HealthRight. These films show the challenges faced by healthcare workers and displaced peoples within Ukraine.</p>
+
+            <p>In 2022, her environmental feature documentary, RETURN SASYK TO THE SEA (Ukraine), went on to thirteen environmental festivals and is streaming on TUBI TV, Apple TV (by TUBI), and others. Grants: Winner of International Wildlife Film Festival "Labs Fellowship" Grant 2022, U.S. Scholar Fulbright Grant (Ukraine) 2018–2019, NEA The National Endowment for the Arts, NYSCA The New York State Council on the Arts, and the Robert Wise Foundation. Festivals: The Chesapeake Film Festival, The International Wildlife Film Festival (Montana), Through Women's Eyes International Film Festival, The Yale Environmental Film Festival, Princeton Environmental Film Festival, Cinema e Ambiente Avezzano (Italy), Paribas Green International Film Festival (Poland), Denali Film Festival (Alaska), MAFF Matsalu Film Festival (Estonia), DOCK Historical Documentary Film Festival (Bulgaria), The Hamptons Film Festival, Rotterdam, Kansas City Kansas (sidebar films about motherhood), The Rural Route Film Festival, and Craft In Focus Festival in Amsterdam, Holland.</p>
+
+            <p>Andrea holds an MFA in Directing from AFI, The American Film Institute Conservatory, Hollywood, CA.</p>
+          </div>
         </li>
-          
-          <li class="expanded">
-        <span class="name">David Kelly Crow</span>
-         <span class="title">Director of Photography | Producer</span>   
-             <p class="bio">David Kelly Crow brings a documentary photographer's eye to every project, finding joy in listening to people's stories and embracing the challenge of depicting each one through a series of images that create an atmosphere of trust. He thrives on the camaraderie of working alongside talented professionals who inspire each other to deliver powerful films with a distinct point of view. The people he films know he's looking to capture that moment of them that is true and spontaneous.
+
+        <li class="expanded">
+          <span class="name">David Kelly Crow</span>
+          <span class="title">Director of Photography | Producer</span>
+          <p class="bio">David Kelly Crow brings a documentary photographer's eye to every project, finding joy in listening to people's stories and embracing the challenge of depicting each one through a series of images that create an atmosphere of trust. He thrives on the camaraderie of working alongside talented professionals who inspire each other to deliver powerful films with a distinct point of view. The people he films know he's looking to capture that moment of them that is true and spontaneous.
 
 His clients include Princeton University, Harvard University, The Nobel Prize, the World Health Organization, Penn Medicine, and FBTGibbons.</p>
         </li>
-        
-         <li class="expanded">
-        <span class="name">Janet Antich</span>
-            <span class="title">Animator</span> 
-             <p class="bio">Janet Antich (the-ink-spot) is a multimedia artist and animator. She holds a B.S. in Architectural Studies from the University of Texas at Austin, and an M.F.A. in Painting and Drawing from Pratt Institute. She specializes in animation and motion graphics for clients ranging from advertising agencies and marketing firms to experimental theater groups, musicians, and independent filmmakers. Drawn to experiments with perception - illusion, distortion, the potential of a line to be a plane / dot / curve / fold - her work combines frame by frame drawings, photography, and tactile objects, utilizing both analog (pre-film) and digital techniques.</p>
+
+        <li class="expanded">
+          <span class="name">Janet Antich</span>
+          <span class="title">Animator</span>
+          <p class="bio">Janet Antich (the-ink-spot) is a multimedia artist and animator. She holds a B.S. in Architectural Studies from the University of Texas at Austin, and an M.F.A. in Painting and Drawing from Pratt Institute. She specializes in animation and motion graphics for clients ranging from advertising agencies and marketing firms to experimental theater groups, musicians, and independent filmmakers. Drawn to experiments with perception — illusion, distortion, the potential of a line to be a plane / dot / curve / fold — her work combines frame by frame drawings, photography, and tactile objects, utilizing both analog (pre-film) and digital techniques.</p>
         </li>
-        
-         <li class="expanded">
-        <span class="name">Askold Buk</span>
-              <span class="title">Composer</span> 
-            <p class="bio">Guitarist/composer/producer Askold Buk has scored numerous episodes of the award-winning PBS documentary series Frontline, as well as 20/20 (ABC), Primetime (ABC) and In Search of America (ABC). He wrote and produced the score to the documentary film Obscene, which premiered at the 2007 Toronto Film Festival. Buk’s songs have been featured on Aquarius (NBC), The Mysteries of Laura (NBC), The Young and the Restless (CBS), Z Nation (Syfy), Hollywood Heights (Nickelodeon), The Hills (MTV), P.O.V. (PBS), and in spots for Zyrtec, ING Bank, Entenmann’s, Ricola and Red Wing Shoes. He also wrote the music for the John F. Kennedy Presidential Library and Museum website commemorating the 50th anniversary of JFK’s inauguration, and for the permanent interactive installation at the Mercy Corps’ Action Center to End World Hunger in New York City.</p>
+
+        <li class="expanded">
+          <span class="name">Askold Buk</span>
+          <span class="title">Composer</span>
+          <p class="bio">Guitarist/composer/producer Askold Buk has scored numerous episodes of the award-winning PBS documentary series Frontline, as well as 20/20 (ABC), Primetime (ABC) and In Search of America (ABC). He wrote and produced the score to the documentary film Obscene, which premiered at the 2007 Toronto Film Festival. Buk's songs have been featured on Aquarius (NBC), The Mysteries of Laura (NBC), The Young and the Restless (CBS), Z Nation (Syfy), Hollywood Heights (Nickelodeon), The Hills (MTV), P.O.V. (PBS), and in spots for Zyrtec, ING Bank, Entenmann's, Ricola and Red Wing Shoes. He also wrote the music for the John F. Kennedy Presidential Library and Museum website commemorating the 50th anniversary of JFK's inauguration, and for the permanent interactive installation at the Mercy Corps' Action Center to End World Hunger in New York City.</p>
         </li>
-       
-        
+
         <li class="expanded">
           <span class="name">Raisa Ihnat</span>
           <span class="title">Soundscape</span>
-          <p class="bio"> Raisa Ihnat is a pianist, audio engineer, and multimedia artist. She graduated from Skidmore College with a BA in Music and Arts Administration 
-            in 2024 and received a Masters of Philosophy in Music and Media Technologies from Trinity College Dublin in 2025.</p>
+          <p class="bio">Raisa Ihnat is a pianist, audio engineer, and multimedia artist. She graduated from Skidmore College with a BA in Music and Arts Administration in 2024 and received a Masters of Philosophy in Music and Media Technologies from Trinity College Dublin in 2025.</p>
         </li>
 
-      
-       
-         <li class="expanded">
-        <span class="name">Paul D. Goodrich</span>
-           <span class="title">Sound Designer</span>   
-             <p class="bio">.</p>
+        <li class="expanded">
+          <span class="name">Paul D. Goodrich</span>
+          <span class="title">Sound Designer</span>
+          <p class="bio">.</p>
         </li>
-       
-        
-           
+
       </ul>
     </div>
   </main>
